@@ -1,4 +1,5 @@
-// Task 1: Compare two JSON objects irrespective of order
+//Task3 Js array & objects task - FSWD 
+//1: Compare two JSON objects irrespective of order
 function areObjectsEqual(obj1, obj2) {
     return JSON.stringify(Object.keys(obj1).sort().map(key => [key, obj1[key]])) === 
            JSON.stringify(Object.keys(obj2).sort().map(key => [key, obj2[key]]));
@@ -9,7 +10,7 @@ var obj2 = { age: 5, name: "Person 1" };
 
 console.log("Are objects equal?", areObjectsEqual(obj1, obj2)); // Output: true
 
-// Task 2 & 3: Fetch Rest Countries API Data
+//2 & 3: Fetch Rest Countries API Data
 fetch("https://restcountries.com/v3.1/all")
     .then(response => response.json())
     .then(data => {
